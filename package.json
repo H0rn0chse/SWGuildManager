@@ -1,0 +1,28 @@
+{
+  "name": "sw-guild-manager",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startLocal": "npm run start --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H0rn0chse/SWGuildManager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/H0rn0chse/SWGuildManager/issues"
+  },
+  "homepage": "https://github.com/H0rn0chse/SWGuildManager#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.14",
+    "ws": "^8.3.0"
+  }
+}
