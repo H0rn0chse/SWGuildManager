@@ -1,0 +1,20 @@
+@import "./background.css";
+@import "./app.css";
+
+html, body, * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+/*Picnic overrides*/
+h1, h2, h3, h4, h5, h6 {
+    padding: 0 !important;
+    text-align: center;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
