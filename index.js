@@ -1,16 +1,20 @@
-import { registerXhrHandler, startServer } from "./server/socket.js";
-import { DatabaseManager } from "./server/DatabaseManager.js";
-import { UserManager } from "./server/UserManager.js";
+import { startServer, registerXhrHandler } from "@h0rn0chse/socket-server";
 
-startServer();
+import { DatabaseManager } from "./server/DatabaseManager.js";
+import { root } from "./server/globals.js"
+
+startServer({
+    publicPaths: [
+        ["/client", "/"],
+        ["/shared", "/shared"]
+    ],
+    root
+});
 
 DatabaseManager.connect()
     .catch(console.error);
 
-UserManager.init();
-
-registerXhrHandler("get", "/test", function (req, res) {
-    const token = req.get("Authorization") || null;
+registerXhrHandler("get", "/test", function (req, res, token=null) {
     const data = {
         data: this.test,
         token

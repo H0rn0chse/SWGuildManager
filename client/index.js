@@ -1,5 +1,7 @@
 import { Deferred } from "../shared/Deferred.js";
 
+//location.search = `?token=${crypto.randomUUID()}`;
+
 const searchParams = new URLSearchParams(location.search);
 const token = searchParams.get("token");
 
