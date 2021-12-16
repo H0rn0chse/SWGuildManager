@@ -1,10 +1,10 @@
-import { setToken, request } from "./socket-server/handler.js";
-import { Deferred } from "../shared/Deferred.js";
+import { setToken, request } from "../socket-server/handler.js";
+import { Deferred } from "../../shared/Deferred.js";
 
 //location.search = `?token=${crypto.randomUUID()}`;
 
 const searchParams = new URLSearchParams(location.search);
-const token = searchParams.get("token");
+const token = searchParams.get("token") || "";
 setToken(token);
 
 request("GET", "/test")
