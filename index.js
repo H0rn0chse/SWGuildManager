@@ -6,7 +6,8 @@ startServer({
     publicPaths: [
         ["/client", "/"],
         ["/shared", "/shared"]
-    ]
+    ],
+    useClientHandler: true
 });
 
 DatabaseManager.connect()
