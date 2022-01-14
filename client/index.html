@@ -3,24 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <title>Exploding Kittens</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6/picnic.min.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/alertifyjs@1/build/css/alertify.min.css">
-    <script src="https://unpkg.com/alertifyjs@1/build/alertify.js"></script>
-    <script src="https://unpkg.com/@h0rn0chse/night-sky@1/dist/bundle.min.js"></script>
+    <!-- dev files-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6/picnic.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1/build/css/alertify.css">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2/dist/vuetify.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex@3/dist/vuex.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1/build/alertify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@h0rn0chse/night-sky@1/dist/bundle.js"></script>
+
+    <!-- prod files
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6/picnic.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1/build/css/alertify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2/dist/vuetify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex@3/dist/vuex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3/dist/vue-router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2/dist/vuetify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1/build/alertify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@h0rn0chse/night-sky@1/dist/bundle.min.js"></script>
+    -->
 
     <link rel="stylesheet" href="./styles/main.css">
-    <script type="module" src="./scripts/index.js"></script>
-    <script type="module" src="./scripts/navigation.js"></script>
+    <!--<script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/navigation.js"></script>-->
+    <script type="module" src="./scripts/App.js"></script>
 </head>
 <body>
     <night-sky id="background">
     </night-sky>
     <div id="app">
-        <div id="header"></div>
+        <!--<div id="header"></div>
         <div id="nav">
+            <div id="navBurger">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div data-target="main" class="navItem selected">Welcome</div>
             <div data-target="personal" class="navItem">Konto</div>
             <div data-target="members" class="navItem">Mitglieder</div>
@@ -37,13 +68,13 @@
         </div>
         <div id="data" class="content hidden">
             <h1>Data</h1>
-        </div>
+        </div>-->
     </div>
 </body>
 <script
     data-label="Check out the GitHub repository!"
     data-href="https://github.com/H0rn0chse/SWGuildManager"
     data-target="_blank"
-    src="https://unpkg.com/github-corners@latest/dist/embed.min.js">
+    src="https://cdn.jsdelivr.net/npm/github-corners@latest/dist/embed.min.js">
 </script>
 </html>
