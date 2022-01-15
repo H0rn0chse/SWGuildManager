@@ -27,13 +27,13 @@ class _AuthManager {
                 if (!Array.isArray(data)) {
                     throw new Error("The response is malformed");
                 }
-                alertify.success("Recieved some data:");
+                alertify.success("Authentication successful");
                 console.log(data);
                 return data;
             })
             .catch((err) => {
                 console.error(err);
-                alertify.error("Some error occurred");
+                alertify.error("Authentication failed");
                 return [];
             });
         return this.rolesPromise;

@@ -23,7 +23,7 @@ export const NavBar = Vue.component("nav-bar", {
                 >
                     <v-list-item-content>
                         <v-list-item-title
-                            class="text-h6"
+                            class="text-h6 py-1"
                         >
                             {{ item.title }}
                         </v-list-item-title>

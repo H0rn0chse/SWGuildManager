@@ -28,7 +28,9 @@ const app = new Vue({
                 <v-app-bar-nav-icon
                     @click="setNavBarVisible(!navBarVisible)"
                 />
-                <v-toolbar-title>
+                <v-toolbar-title
+                    class="text-h6"
+                >
                     {{$route.name}}
                 </v-toolbar-title>
             </v-app-bar>
