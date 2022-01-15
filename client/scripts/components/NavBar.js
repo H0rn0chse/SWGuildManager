@@ -48,6 +48,10 @@ export const NavBar = Vue.component("nav-bar", {
                 return this.activeRouteIndex;
             },
             set (newRouteIndex) {
+                if (newRouteIndex ===undefined || this.activeRouteIndex === newRouteIndex) {
+                    return;
+                }
+
                 const newRoute = this.routes[newRouteIndex].route;
                 this.$router.push(newRoute);
             }

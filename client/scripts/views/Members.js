@@ -2,14 +2,16 @@ import { Vuex } from "../libs.js";
 
 const { mapState, mapActions, mapGetters } = Vuex;
 
-export const HomeView = {
+export const MembersView = {
     template: `
-        <v-main
-            class="d-flex justify-center align-center"
-        >
-            <h1>
-                Willkommen bei den Exploding Kittens
-            </h1>
+        <v-main>
+            <v-container
+                class="d-flex flex-column justify-start align-center"
+            >
+                <h2>
+                    Mitgliederverwaltung
+                </h2>
+            </v-container>
         </v-main>
     `,
     props: [],

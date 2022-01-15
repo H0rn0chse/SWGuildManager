@@ -32,9 +32,7 @@ const app = new Vue({
                     {{$route.name}}
                 </v-toolbar-title>
             </v-app-bar>
-            <v-main>
-                <router-view/>
-            </v-main>
+            <router-view/>
         </v-app>
     `,
     mounted () {

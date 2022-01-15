@@ -10,11 +10,7 @@ export const appState = new Vuex.Store({
                 title: "Home",
                 route: "/home"
             },
-            {
-                title: "Personal",
-                route: "/personal"
-            },
-        ]
+        ],
     },
     getters: {
         activeRouteIndex (state) {
@@ -24,6 +20,9 @@ export const appState = new Vuex.Store({
         }
     },
     mutations: {
+        addRoute (state, route) {
+            state.routes.push(route);
+        },
         setActiveRoute (state, newRoute) {
             state.activeRoute = newRoute;
         },

@@ -4,44 +4,35 @@ const { mapState, mapActions, mapGetters } = Vuex;
 
 export const ErrorPageView = {
     template: `
-        <v-container>
-            <h1>
-                Es ist ein Fehler aufgetreten
-            </h1>
-            <v-row class="text-center">
-                <v-col>
-                    <p>
-                        Sollte dieser Fehler häufiger auftreten die App neu starten oder neu installieren. Soillte er weiterhin auftreten bitte ein Ticket aufmachen.
-                    </p>
-                    <v-btn
-                        @click="$router.go(-1)"
-                    >
-                        Zurück zur letzten Seite
-                    </v-btn>
-                    <v-btn
-                        @click="$router.replace('/')"
-                    >
-                        Zurück zur Hauptseite
-                    </v-btn>
-                    <router-link
-                        :to="{ path: '/'}"
-                        v-slot="{ navigate }"
-                        custom
-                    >
-                        <v-btn @click="navigate" >
-                            Zurück zur Hauptseite
-                        </v-btn>
-                    </router-link>
-                </v-col>
-            </v-row>
-        </v-container>
+        <v-main>
+            <v-container
+                class="d-flex flex-column justify-start align-center"
+            >
+                <h1>
+                    Es ist ein Fehler aufgetreten
+                </h1>
+                <p
+                    class="pa-2"
+                    style="text-align:center"
+                >
+                    Sollte dieser Fehler häufiger auftreten die App neu starten oder ein Ticket aufmachen.
+                </p>
+                <v-btn
+                    @click="$router.go(-1)"
+                >
+                    Zurück zur letzten Seite
+                </v-btn>
+                <v-btn
+                    @click="$router.replace('/')"
+                >
+                    Zurück zur Hauptseite
+                </v-btn>
+            </v-container>
+        </v-main>
     `,
-    props: [
-    ],
-    mounted () {
-    },
-    updated () {
-    },
+    props: [],
+    mounted () {},
+    updated () {},
     computed: {
         ...mapState([]),
         ...mapGetters([]),

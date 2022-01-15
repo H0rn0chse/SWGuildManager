@@ -4,18 +4,19 @@ const { mapState, mapActions, mapGetters } = Vuex;
 
 export const PersonalView = {
     template: `
-        <v-container>
-            <h1>
-                Personal
-            </h1>
+    <v-main>
+        <v-container
+            class="d-flex flex-column justify-start align-center"
+        >
+            <h2>
+                Bearbeite dein Profil
+            </h2>
         </v-container>
+    </v-main>
     `,
-    props: [
-    ],
-    mounted () {
-    },
-    updated () {
-    },
+    props: [],
+    mounted () {},
+    updated () {},
     computed: {
         ...mapState([]),
         ...mapGetters([]),

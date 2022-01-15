@@ -1,6 +1,6 @@
 import { startServer, registerXhrHandler } from "@h0rn0chse/socket-server";
-
 import { DatabaseManager } from "./server/DatabaseManager.js";
+import { AuthManager } from "./server/AuthManager.js";
 
 startServer({
     publicPaths: [
@@ -12,6 +12,8 @@ startServer({
 
 DatabaseManager.connect()
     .catch(console.error);
+
+AuthManager.init();
 
 registerXhrHandler("get", "/test", function (req, res, token=null) {
     const data = {
