@@ -4,34 +4,34 @@ const { mapState, mapActions, mapGetters } = Vuex;
 
 export const NavBar = Vue.component("nav-bar", {
     template: `
-    <v-navigation-drawer
-        v-model="navBarVisibleLocal"
-        color="grey lighten-3"
-        app
-    >
-        <v-list
-            dense
-            nav
+        <v-navigation-drawer
+            v-model="navBarVisibleLocal"
+            color="grey lighten-3"
+            app
         >
-            <v-list-item-group
-                v-model="activeRouteIndexLocal"
-                active-class="deep-purple--text text--accent-4"
+            <v-list
+                dense
+                nav
             >
-                <v-list-item
-                    v-for="item in routes"
-                    :key="item.title"
+                <v-list-item-group
+                    v-model="activeRouteIndexLocal"
+                    active-class="deep-purple--text text--accent-4"
                 >
-                    <v-list-item-content>
-                        <v-list-item-title
-                            class="text-h6 py-1"
-                        >
-                            {{ item.title }}
-                        </v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-            </v-list-item-group>
-        </v-list>
-    </v-navigation-drawer>
+                    <v-list-item
+                        v-for="item in routes"
+                        :key="item.title"
+                    >
+                        <v-list-item-content>
+                            <v-list-item-title
+                                class="text-h6 py-1"
+                            >
+                                {{ item.title }}
+                            </v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list-item-group>
+            </v-list>
+        </v-navigation-drawer>
     `,
     props: [
     ],

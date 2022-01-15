@@ -13,3 +13,7 @@ export function equalKeyObjects (key1, key2) {
         return key1[key] === key2[key];
     }, true);
 }
+
+export function deepClone (object) {
+    return JSON.parse(JSON.stringify(object));
+}

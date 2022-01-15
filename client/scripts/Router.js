@@ -28,36 +28,39 @@ export const router = new VueRouter({
 
 router.onReady(async () => {
     if (await AuthManager.hasRole("Personal")) {
-        router.addRoute({
-            path: "/personal",
-            name: "Profil",
-            components: {
+        enableRoute (
+            "/personal",
+            "Profil",
+            {
                 default: PersonalView
             },
-        });
-
-        appState.commit("addRoute", {
-            title: "Profil",
-            route: "/personal"
-        });
+        );
     }
 
     if (await AuthManager.hasRole("Members")) {
-        router.addRoute({
-            path: "/members",
-            name: "Mitglieder",
-            components: {
+        enableRoute (
+            "/members",
+            "Mitglieder",
+            {
                 default: MembersView
             },
-        });
-
-        appState.commit("addRoute", {
-            title: "Mitglieder",
-            route: "/members"
-        });
+        );
     }
 });
 
 router.afterEach((to, from) => {
     appState.commit("setActiveRoute", to.name);
 });
+
+function enableRoute (path, name, components) {
+    router.addRoute({
+        path: path,
+        name: name,
+        components
+    });
+
+    appState.commit("addRoute", {
+        title: name,
+        route: path
+    });
+}
