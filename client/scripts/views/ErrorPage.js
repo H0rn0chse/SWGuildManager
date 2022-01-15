@@ -1,7 +1,3 @@
-import { Vuex } from "../libs.js";
-
-const { mapState, mapActions, mapGetters } = Vuex;
-
 export const ErrorPageView = {
     template: `
         <v-main>
@@ -30,17 +26,4 @@ export const ErrorPageView = {
             </v-container>
         </v-main>
     `,
-    props: [],
-    mounted () {},
-    updated () {},
-    computed: {
-        ...mapState([]),
-        ...mapGetters([]),
-    },
-    data () {
-        return {};
-    },
-    methods: {
-        ...mapActions([]),
-    }
 };

@@ -1,7 +1,3 @@
-import { Vuex } from "../libs.js";
-
-const { mapState, mapActions, mapGetters } = Vuex;
-
 export const HomeView = {
     template: `
         <v-main
@@ -12,17 +8,4 @@ export const HomeView = {
             </h1>
         </v-main>
     `,
-    props: [],
-    mounted () {},
-    updated () {},
-    computed: {
-        ...mapState([]),
-        ...mapGetters([]),
-    },
-    data () {
-        return {};
-    },
-    methods: {
-        ...mapActions([]),
-    }
 };

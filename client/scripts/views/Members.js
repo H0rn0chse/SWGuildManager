@@ -1,7 +1,3 @@
-import { Vuex } from "../libs.js";
-
-const { mapState, mapActions, mapGetters } = Vuex;
-
 export const MembersView = {
     template: `
         <v-main>
@@ -14,17 +10,4 @@ export const MembersView = {
             </v-container>
         </v-main>
     `,
-    props: [],
-    mounted () {},
-    updated () {},
-    computed: {
-        ...mapState([]),
-        ...mapGetters([]),
-    },
-    data () {
-        return {};
-    },
-    methods: {
-        ...mapActions([]),
-    }
 };

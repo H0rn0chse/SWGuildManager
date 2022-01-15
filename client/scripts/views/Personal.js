@@ -1,7 +1,3 @@
-import { Vuex } from "../libs.js";
-
-const { mapState, mapActions, mapGetters } = Vuex;
-
 export const PersonalView = {
     template: `
     <v-main>
@@ -14,17 +10,4 @@ export const PersonalView = {
         </v-container>
     </v-main>
     `,
-    props: [],
-    mounted () {},
-    updated () {},
-    computed: {
-        ...mapState([]),
-        ...mapGetters([]),
-    },
-    data () {
-        return {};
-    },
-    methods: {
-        ...mapActions([]),
-    }
 };
