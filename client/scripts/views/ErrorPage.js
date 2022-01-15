@@ -1,4 +1,5 @@
-const { Vuex } = globalThis;
+import { Vuex } from "../libs.js";
+
 const { mapState, mapActions, mapGetters } = Vuex;
 
 export const ErrorPageView = {

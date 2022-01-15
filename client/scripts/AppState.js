@@ -1,4 +1,4 @@
-const { Vuex } = globalThis;
+import { Vuex } from "./libs.js";
 
 export const appState = new Vuex.Store({
     state: {

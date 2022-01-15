@@ -1,5 +1,6 @@
 import { setToken, request } from "../socket-server/handler.js";
 import { Deferred } from "../../shared/Deferred.js";
+import { alertify } from "./libs.js";
 
 //location.search = `?token=${crypto.randomUUID()}`;
 

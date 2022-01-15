@@ -6,6 +6,9 @@ class _AuthorizationManager {
     }
 
     handleAuthorization (req, res, token) {
+        // TODO:
+        const readData = () => {};
+
         const response = {
             account: false,
             manageMembers: false,

@@ -1,10 +1,11 @@
 import { appState } from "./AppState.js";
 import { NavBar } from "./components/NavBar.js";
+import { Vue, Vuetify, Vuex } from "./libs.js";
 import { router } from "./Router.js";
 
-const { Vue, Vuex, Vuetify } = globalThis;
 const { mapState, mapActions, mapGetters } = Vuex;
 
+// eslint-disable-next-line no-unused-vars
 const componentList = [
     NavBar,
 ];

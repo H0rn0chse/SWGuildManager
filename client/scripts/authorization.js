@@ -1,4 +1,5 @@
 import { setToken, request } from "../socket-server/handler.js";
+import { alertify } from "./libs.js";
 
 const searchParams = new URLSearchParams(location.search);
 const token = searchParams.get("token") || "";

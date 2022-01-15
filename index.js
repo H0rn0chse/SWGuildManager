@@ -22,4 +22,4 @@ registerXhrHandler("get", "/test", function (req, res, token=null) {
     res.end(JSON.stringify(data));
 
     return true;
-}, { test: "123" })
+}, { test: "123" });

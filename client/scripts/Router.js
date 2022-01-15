@@ -2,8 +2,7 @@ import { HomeView } from "./views/Home.js";
 import { ErrorPageView } from "./views/ErrorPage.js";
 import { PersonalView } from "./views/Personal.js";
 import { appState } from "./AppState.js";
-
-const { VueRouter } = globalThis;
+import { VueRouter } from "./libs.js";
 
 export const router = new VueRouter({
     routes: [

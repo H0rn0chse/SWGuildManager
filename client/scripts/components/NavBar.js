@@ -1,4 +1,5 @@
-const { Vue, Vuex } = globalThis;
+import { Vue, Vuex } from "../libs.js";
+
 const { mapState, mapActions, mapGetters } = Vuex;
 
 export const NavBar = Vue.component("nav-bar", {
