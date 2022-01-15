@@ -3,6 +3,7 @@ const { Vuex } = globalThis;
 export const appState = new Vuex.Store({
     state: {
         title: "test title",
+        navBarVisible: false,
         activeRoute: "",
         routes: [
             {
@@ -25,10 +26,18 @@ export const appState = new Vuex.Store({
     mutations: {
         setActiveRoute (state, newRoute) {
             state.activeRoute = newRoute;
+        },
+        updateProp (state, data) {
+            state[data.name] = data.value;
         }
     },
     actions: {
+        setNavBarVisible (context, visible) {
+            const data = {
+                name: "navBarVisible",
+                value: visible
+            };
+            context.commit("updateProp", data);
+        }
     },
 });
-
-globalThis.AppState = appState;

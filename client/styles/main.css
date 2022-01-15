@@ -34,10 +34,6 @@ html, body {
 }
 
 /*Vuetify overrides*/
-.v-application {
-    background-color: none;
-}
-
 .v-navigation-drawer *{
     color: unset;
 }

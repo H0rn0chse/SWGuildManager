@@ -35,6 +35,3 @@ export const router = new VueRouter({
 router.afterEach((to, from) => {
     appState.commit("setActiveRoute", to.name);
 });
-
-// for debugging
-window.Router = router;

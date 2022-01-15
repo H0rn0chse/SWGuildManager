@@ -1,10 +1,12 @@
 import { appState } from "./AppState.js";
+import { NavBar } from "./components/NavBar.js";
 import { router } from "./Router.js";
 
 const { Vue, Vuex, Vuetify } = globalThis;
 const { mapState, mapActions, mapGetters } = Vuex;
 
 const componentList = [
+    NavBar,
 ];
 
 const app = new Vue({
@@ -14,34 +16,7 @@ const app = new Vue({
     vuetify: new Vuetify(),
     template: `
         <v-app>
-            <v-navigation-drawer
-                v-model="navVisible"
-                color="grey lighten-3"
-                app
-            >
-                <v-list
-                    dense
-                    nav
-                >
-                    <v-list-item-group
-                        v-model="activeRouteIndexLocal"
-                        active-class="deep-purple--text text--accent-4"
-                    >
-                        <v-list-item
-                            v-for="item in routes"
-                            :key="item.title"
-                        >
-                            <v-list-item-content>
-                                <v-list-item-title
-                                    class="text-h6"
-                                >
-                                    {{ item.title }}
-                                </v-list-item-title>
-                            </v-list-item-content>
-                        </v-list-item>
-                    </v-list-item-group>
-                </v-list>
-            </v-navigation-drawer>
+            <nav-bar />
             <v-app-bar
                 color="deep-purple accent-4"
                 elevate-on-scroll
@@ -50,7 +25,7 @@ const app = new Vue({
                 app
             >
                 <v-app-bar-nav-icon
-                    @click="navVisible = true"
+                    @click="setNavBarVisible(!navBarVisible)"
                 />
                 <v-toolbar-title>
                     {{$route.name}}
@@ -66,30 +41,20 @@ const app = new Vue({
     computed: {
         ...mapState([
             "title",
-            "routes",
+            "navBarVisible",
         ]),
-        ...mapGetters([
-            "activeRouteIndex",
-        ]),
-        activeRouteIndexLocal: {
-            get () {
-                return this.activeRouteIndex;
-            },
-            set (newRouteIndex) {
-                const newRoute = this.routes[newRouteIndex].route;
-                this.$router.push(newRoute);
-            }
-        },
+        ...mapGetters([]),
     },
     data () {
-        return {
-            navVisible: false,
-        };
+        return {};
     },
     methods: {
-        ...mapActions([]),
+        ...mapActions([
+            "setNavBarVisible"
+        ]),
     },
 });
 
+globalThis.Router = router;
 globalThis.App = app;
 globalThis.AppState = appState;
