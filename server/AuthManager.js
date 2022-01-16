@@ -9,8 +9,8 @@ class _AuthManager {
         const response = [];
 
         if (token) {
-            response.push("Personal");
-            response.push("Members");
+            response.push("PROFILE_EDIT");
+            response.push("MEMBER_LIST_EDIT");
         }
 
         res.json(response);

@@ -8,21 +8,21 @@ class _AuthManager {
         setToken(this.token);
     }
 
-    async hasRole (role) {
-        const roles = await this.getRoles();
-        return roles.includes(role);
+    async hasPermission (permission) {
+        const permissions = await this.getPermissions();
+        return permissions.includes(permission);
     }
 
-    getRoles () {
+    getPermissions () {
         if (!this.token) {
             return Promise.resolve([]);
         }
 
-        if (this.rolesPromise) {
-            return this.rolesPromise;
+        if (this.permissionPromise) {
+            return this.permissionPromise;
         }
 
-        this.rolesPromise = request("GET", "/authorization")
+        this.permissionPromise = request("GET", "/authorization")
             .then((data) => {
                 if (!Array.isArray(data)) {
                     throw new Error("The response is malformed");
@@ -36,7 +36,7 @@ class _AuthManager {
                 alertify.error("Authentication failed");
                 return [];
             });
-        return this.rolesPromise;
+        return this.permissionPromise;
     }
 }
 

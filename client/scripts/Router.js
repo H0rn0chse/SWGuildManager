@@ -27,7 +27,7 @@ export const router = new VueRouter({
 });
 
 router.onReady(async () => {
-    if (await AuthManager.hasRole("Personal")) {
+    if (await AuthManager.hasPermission("PROFILE_EDIT")) {
         enableRoute (
             "/personal",
             "Profil",
@@ -37,7 +37,7 @@ router.onReady(async () => {
         );
     }
 
-    if (await AuthManager.hasRole("Members")) {
+    if (await AuthManager.hasPermission("MEMBER_LIST_EDIT")) {
         enableRoute (
             "/members",
             "Mitglieder",

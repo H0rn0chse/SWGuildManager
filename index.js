@@ -3,6 +3,7 @@ import { DatabaseManager } from "./server/DatabaseManager.js";
 import { AuthManager } from "./server/AuthManager.js";
 
 startServer({
+    //host: "192.168.0.161",
     publicPaths: [
         ["/client", "/"],
         ["/shared", "/shared"]
@@ -25,3 +26,5 @@ registerXhrHandler("get", "/test", function (req, res, token=null) {
 
     return true;
 }, { test: "123" });
+
+console.log("http://localhost:8080?token=aaa");
