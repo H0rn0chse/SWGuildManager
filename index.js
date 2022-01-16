@@ -1,6 +1,7 @@
 import { startServer, registerXhrHandler } from "@h0rn0chse/socket-server";
 import { DatabaseManager } from "./server/DatabaseManager.js";
 import { AuthManager } from "./server/AuthManager.js";
+import { init as initProfileHandler } from "./server/ProfileHandler.js";
 
 startServer({
     //host: "192.168.0.161",
@@ -15,6 +16,7 @@ DatabaseManager.connect()
     .catch(console.error);
 
 AuthManager.init();
+initProfileHandler();
 
 registerXhrHandler("get", "/test", function (req, res, token=null) {
     const data = {

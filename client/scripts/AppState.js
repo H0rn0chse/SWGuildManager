@@ -11,6 +11,9 @@ export const appState = new Vuex.Store({
                 route: "/home"
             },
         ],
+        profile: {
+            name: ""
+        }
     },
     getters: {
         activeRouteIndex (state) {
@@ -28,6 +31,9 @@ export const appState = new Vuex.Store({
         },
         updateProp (state, data) {
             state[data.name] = data.value;
+        },
+        setProfileData (state, data) {
+            state.profile = data;
         }
     },
     actions: {

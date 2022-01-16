@@ -35,8 +35,17 @@ html, body {
 }
 
 /*Vuetify overrides*/
-.v-navigation-drawer *{
+.v-navigation-drawer * {
     color: unset;
+}
+
+.v-main * :not(.v-btn__content):not(.v-btn) {
+    color: white;
+    border-color: white;
+}
+
+.v-input__slot:before {
+    border-color: white !important;
 }
 
 /*Picnic overrides*/
